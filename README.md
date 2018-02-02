@@ -1,2 +1,2 @@
 # web_api
-API for mobile and desktop apps
+Rest API for mobile and desktop apps
