@@ -9,8 +9,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: utf8
   database: traineeship
-  username: root
-  password: qq4656802
+  username: traineeship
+  password: cuwlamav
   host: 127.0.0.1
   port: 3306
 
