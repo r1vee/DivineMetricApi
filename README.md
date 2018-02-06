@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -32,3 +33,7 @@ rails db:migrate
 * Deployment instructions
 
 * ...
+=======
+# web_api
+Rest API for mobile and desktop apps
+>>>>>>> 03fbc587522fffc9b9deefb3504d7d3a0e23259f
