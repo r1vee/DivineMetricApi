@@ -8,9 +8,9 @@ default: &default
   adapter: mysql2
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: utf8
-  database: traineeship
-  username: traineeship
-  password: cuwlamav
+  database: mediaanalitycs
+  username: analitycs
+  password: analit123!
   host: 127.0.0.1
   port: 3306
 
