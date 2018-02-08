@@ -6,8 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-3.times do
-  person = Person.create({name: FFaker::Name.name, found_date_time: FFaker::Time.datetime})
+
+t = 12
+t.times do
+  person = Person.create({name: FFaker::Name.name})
   site = Site.create({name: FFaker::Internet.domain_name})
-  url = Page.create({url: FFaker::Internet.http_url})
-end
+  # url = Page.create({})
+  site.pages.create({
+  	site_id: rand(t),
+  	url: FFaker::Internet.http_url})
+end	
