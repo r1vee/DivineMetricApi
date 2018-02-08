@@ -11,7 +11,6 @@ t = 12
 t.times do
   person = Person.create({name: FFaker::Name.name})
   site = Site.create({name: FFaker::Internet.domain_name})
-  # url = Page.create({})
   site.pages.create({
   	site_id: rand(t),
   	url: FFaker::Internet.http_url})
