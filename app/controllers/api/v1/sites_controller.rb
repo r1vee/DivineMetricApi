@@ -43,7 +43,12 @@ module Api
 
       # DELETE /sites/1.json
       def destroy
-        @site.destroy
+        @site = Site.find(params[:id])
+        if @site
+          @site.destroy
+        else
+          render json: {site: "not found"}, status: :not_found
+        end
       end
 
       private

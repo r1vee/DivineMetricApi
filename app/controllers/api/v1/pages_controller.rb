@@ -13,6 +13,11 @@ module Api
         @page = Page.find(params[:id])
       end
 
+      # GET /pages/1.json
+      def show_in_range
+        @page = Page.where(found_date_time: params[:start_date]..params[:end_date])
+      end
+
       # GET /pages/new
       def new
       end
@@ -43,7 +48,12 @@ module Api
 
       # DELETE /pages/1.json
       def destroy
-        @page.destroy
+        @page = Page.find(params[:id])
+        if @page
+          @page.destroy
+        else
+          render json: {page: "not found"}, status: :not_found
+        end
       end
 
       private

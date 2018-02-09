@@ -43,7 +43,12 @@ module Api
 
       # DELETE /keywords/1.json
       def destroy
-        @keyword.destroy
+        @keyword = Keyword.find(params[:id])
+        if @keyword
+          @keyword.destroy
+        else
+          render json: {keyword: "not found"}, status: :not_found
+        end
       end
 
       private

@@ -43,7 +43,12 @@ module Api
 
       # DELETE /person_page_rank/1.json
       def destroy
-        @person_page_rank.destroy
+        @person_page_rank = PersonPageRank.find(params[:id])
+        if @person_page_rank
+          @person_page_rank.destroy
+        else
+          render json: {person_page_rank: "not found"}, status: :not_found
+        end
       end
 
       private

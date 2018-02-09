@@ -22,6 +22,17 @@ end
 #   req.headers['Content-Type'] = 'application/json'
 # end
 
+# response = client.delete do |req|
+#   req.url '/api/v1/sites/1.json'
+#   req.headers['Content-Type'] = 'application/json'
+# end
+
+# response = client.get do |req|
+#   req.url '/api/v1/sites/1.json'
+#   req.headers['Content-Type'] = 'application/json'
+#   req.body = '{ "page": {"start_date": "2018-02-08 10:41:08", "end_date": "2018-02-08 10:41:08"} }'
+# end
+
 
 puts Oj.load(response.body)
 puts response.status

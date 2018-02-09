@@ -43,7 +43,12 @@ module Api
 
       # DELETE /persons/1.json
       def destroy
-        @person.destroy
+        @person = Person.find(params[:id])
+        if @person
+          @person.destroy
+        else
+          render json: {person: "not found"}, status: :not_found
+        end
       end
 
       private
