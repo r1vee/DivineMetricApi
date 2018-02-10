@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
       resources :keywords, :pages, :persons, :person_page_rank, :sites
       get :show_in_range, path: '/pages/show_in_range', only: [index]
+    
     end
   end
 end
